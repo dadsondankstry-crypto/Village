@@ -1,0 +1,72 @@
+{
+  "id": "montanha",
+  "nome": "Pico da Montanha",
+  "mapas": [
+    {
+      "id": "montanha",
+      "nome": "Pico da Montanha",
+      "x": 100,
+      "y": 2400,
+      "w": 1400,
+      "h": 1000,
+      "cor": "#4a4a4a",
+      "monstros": ["golem"]
+    }
+  ],
+  "monstros": {
+    "golem": {
+      "n": "Golem de Pedra",
+      "e": "🗿",
+      "lvl": 8,
+      "hp": 250,
+      "atk": 30,
+      "def": 20,
+      "xp": 120,
+      "ouro": 80,
+      "spd": 30,
+      "r": 28,
+      "cor": "#888",
+      "visao": 250,
+      "drops": [
+        ["sucata", 0.9],
+        ["espada_aco", 0.2]
+      ]
+    }
+  },
+  "itens": {
+    "picareta_lendaria": {
+      "n": "Picareta Lendária",
+      "e": "⛏️",
+      "t": "arma",
+      "slot": "arma",
+      "atk": 25,
+      "preco": 600,
+      "r": 4
+    }
+  },
+  "predios": [
+    {
+      "id": "cabana_eremita",
+      "nome": "Cabana",
+      "e": "🏠",
+      "x": 700,
+      "y": 2800,
+      "w": 150,
+      "h": 120
+    }
+  ],
+  "missoes": {
+    "matar_golem_repetivel": {
+      "id": "matar_golem_repetivel",
+      "nome": "Golems na Montanha",
+      "desc": "Mate 3 Golems de Pedra",
+      "tipo": "matar",
+      "alvo": "golem",
+      "qtd": 3,
+      "tipo_missao": "repetivel",
+      "cooldown_horas": 2,
+      "r_ouro": 200,
+      "r_xp": 100
+    }
+  }
+}
