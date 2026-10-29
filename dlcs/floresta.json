@@ -10,6 +10,7 @@
       "w": 1200,
       "h": 1000,
       "cor": "#1e3b1e",
+      "conexao": "estrada",
       "monstros": ["lobo_sombrio"]
     }
   ],
