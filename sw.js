@@ -1,4 +1,4 @@
-const CACHE_NAME = 'herois-vila-v1.20';
+const CACHE_NAME = 'herois-vila-v1.23';
 const ASSETS = [
   './',
   './index.html',
@@ -6,13 +6,29 @@ const ASSETS = [
   './icon-192.png',
   './icon-512.png',
   './dlcs/packs.json',
-  './dlcs/montanha.json'
+  './dlcs/montanha.json',
+  './dlcs/floresta.json'
 ];
 
 self.addEventListener('install', (e) => {
+  self.skipWaiting(); // Força a atualização imediata
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS);
+    })
+  );
+});
+
+self.addEventListener('activate', (e) => {
+  e.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName); // Apaga o cache antigo
+          }
+        })
+      );
     })
   );
 });
