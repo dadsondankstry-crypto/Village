@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="theme-color" content="#1b1b22">
 <link rel="manifest" href="manifest.json">
-<title>Heróis da Vila V 1.23</title>
+<title>Heróis da Vila V 1.25</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
 html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:system-ui,-apple-system,sans-serif;color:#fff;touch-action:none;overscroll-behavior:none}
@@ -197,7 +197,7 @@ var FLOWERS = [];
 
 /* ================= ESTADO ================= */
 var SAVE_KEY = 'heroisDaVila_v19';
-var SAVE = {chars:{}, current:null, ver:'1.22', world:{zones:[], customMonsters:{}}, config:{autoCollect:true, autoAttack:true, showPlayerHp:true, showMonsterHp:true, showMinimap:true, showCoords:true, minimapZoom:1}};
+var SAVE = {chars:{}, current:null, ver:'1.25', world:{zones:[], customMonsters:{}}, config:{autoCollect:true, autoAttack:true, showPlayerHp:true, showMonsterHp:true, showMinimap:true, showCoords:true, minimapZoom:1}};
 var G = null;
 var currentId = null;
 var monsters = [];
@@ -509,7 +509,6 @@ function clampToWorld(){
     }
   }
 
-  // Colisão do Rio (Ponte Norte)
   if (G.y >= CAMPOS_Y && G.y <= VILA.y) {
     var inBridgeX = (G.x >= PONTE.x + 15 && G.x <= PONTE.x + PONTE.w - 15);
     if (!inBridgeX) {
@@ -518,7 +517,6 @@ function clampToWorld(){
     }
   }
 
-  // Colisão do Precipício (Ponte Sul - Montanha)
   if (G.y >= 2320 && G.y <= 2400) {
     var inPonteSul = (G.x >= 650 && G.x <= 950);
     if (!inPonteSul) {
