@@ -1,4 +1,4 @@
-const CACHE_NAME = 'herois-vila-v1.23';
+const CACHE_NAME = 'herois-vila-v1.25';
 const ASSETS = [
   './',
   './index.html',
