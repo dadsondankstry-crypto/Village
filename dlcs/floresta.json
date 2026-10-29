@@ -1,0 +1,80 @@
+{
+  "id": "floresta",
+  "nome": "Floresta Sombria",
+  "mapas": [
+    {
+      "id": "floresta",
+      "nome": "Floresta Sombria",
+      "x": 1600,
+      "y": 1380,
+      "w": 1200,
+      "h": 1000,
+      "cor": "#1e3b1e",
+      "monstros": ["lobo_sombrio"]
+    }
+  ],
+  "monstros": {
+    "lobo_sombrio": {
+      "n": "Lobo Sombrio",
+      "e": "🐺",
+      "lvl": 4,
+      "hp": 85,
+      "atk": 16,
+      "def": 4,
+      "xp": 35,
+      "ouro": 25,
+      "spd": 90,
+      "r": 20,
+      "cor": "#2c3e50",
+      "visao": 180,
+      "drops": [
+        ["pele", 0.8],
+        ["erva_rara", 0.4],
+        ["pocao_vida", 0.2]
+      ]
+    }
+  },
+  "itens": {
+    "arco_elfico": {
+      "n": "Arco Élfico",
+      "e": "🏹",
+      "t": "arma",
+      "slot": "arma",
+      "atk": 12,
+      "preco": 180,
+      "r": 3
+    },
+    "erva_rara": {
+      "n": "Erva Rara",
+      "e": "🌿",
+      "t": "material",
+      "preco": 15,
+      "r": 2
+    }
+  },
+  "predios": [
+    {
+      "id": "cacador",
+      "nome": "Caçador",
+      "e": "🏹",
+      "x": 1800,
+      "y": 1600,
+      "w": 150,
+      "h": 120
+    }
+  ],
+  "missoes": {
+    "limpeza_floresta": {
+      "id": "limpeza_floresta",
+      "nome": "Limpeza da Floresta",
+      "desc": "Mate 5 Lobos Sombrios",
+      "tipo": "matar",
+      "alvo": "lobo_sombrio",
+      "qtd": 5,
+      "tipo_missao": "repetivel",
+      "cooldown_horas": 1,
+      "r_ouro": 150,
+      "r_xp": 80
+    }
+  }
+}
